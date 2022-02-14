@@ -1,0 +1,25 @@
+{% extends "basesid.html" %}
+
+{% block content %}
+    <section class="ml-5 view">
+        <div class="container p-2">
+            <div class="row">
+                <div class="py-2">
+                    <h5>These are the folders in your department</h5>
+                </div>
+                {% for fold in folder %}
+                <div class="col">
+                    <div class="d-flex flex-row card mt-3">
+                        <div class="card-body align-items-center shadow">
+                            <h5 class="card-title">{{fold.name}}</h5>
+                            <a href="{% url "file-view" fold.id %}" class="btn btn-outline-success mb-2">View Folder</a>
+                            <a href="{% url "file-create" fold.id %}" class="btn btn-outline-success mb-2">Add Files</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+

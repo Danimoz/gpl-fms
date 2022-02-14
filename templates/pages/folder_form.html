@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container mt-5 mb-5">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-md-6">
+                <div class="regcard px-5 py-5">
+                    <h2>Add Form</h2>
+                    <form method="POST">
+                        {% csrf_token %}
+            
+                        <fieldset class="form-group">
+                            {{ form|crispy }}
+                        </fieldset>
+                        
+                        <div class="d-flex align-items-center justify-content-center form-group">
+                            <button class="btn btn-primary mt-4 signup">Create</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        
+        
+
+        </div>
+    </div>
+{% endblock content %}

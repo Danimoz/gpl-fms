@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container mt-5 mb-5">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-md-6">
+                <div class="regcard px-5 py-5">
+                    <div class="col-12">
+                        <h1>Logged Out </h1>
+                        <p>You have been successfully logged out of your account.</p>
+                        <p>
+                            <a class="btn btn-success btn-lg" href="{% url 'login' %}"><i class="fa fa-user"></i> Log in again</a>
+                        </p>
+                    </div>
+
+                    <div class="pt-3">
+                        <small class="text-muted">New Member?
+                            <a class="ml-2" href="{% url 'register' %}">Sign Up</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        
+        
+
+        </div>
+    </div>
+{% endblock content %}
