@@ -1,0 +1,32 @@
+.regcard {
+  border: none;
+  padding: 20px;
+  background-color: #1c1e21;
+  color: #fff
+}
+
+.signup {
+    height: 50px;
+    font-size: 14px
+}
+
+.logo {
+  height: 100%;
+  object-fit: contain;
+}
+
+.sidebary {
+  position: fixed;
+  top: 0;
+  /* rtl:raw:
+  right: 0;
+  */
+  bottom: 0;
+  /* rtl:remove */
+  left: 0;
+  z-index: 100;
+  overflow-y: auto;
+  /* Behind the navbar */
+  /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
